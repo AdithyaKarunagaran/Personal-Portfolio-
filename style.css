@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+:root {
+    --primary-color: #686869;
+    --secondary-color: #616161;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(90deg, #767b81 32%, #f7f5f5 10%);
+    margin: auto;
+
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+header {
+    padding: 1.7rem 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: transparent;
+    align-content: center;
+}
+
+.logo img {
+    width: 10%;
+}
+
+#click {
+    display: none;
+}
+
+nav {
+    z-index: 1;
+}
+
+nav a {
+    color: #3f3f3f;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 0.4rem 1.3rem;
+
+}
+
+
+.menu {
+    display: none;
+}
+
+/*NAVBAR*/
+
+section {
+    margin: 2rem 8.5rem;
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5rem auto;
+}
+
+#content h1 {
+    font-size: 2.3rem;
+    font-weight: 600;
+    color: #33383C;
+}
+
+.Information {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin: auto;
+}
+
+.social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.3rem;
+    margin-top: 1.7rem;
+}
+
+.social a {
+    color: var(--secondary-color);
+    font-size: 1.3rem;
+    border: 1px solid #33383C;
+    border-radius: 50%;
+    padding: 0.4rem;
+    text-align: center;
+    width: 30px;
+    height: 28px;
+    display: grid;
+    place-items: center;
+
+}
+
+.social a:hover {
+    color: #fff;
+    background-color: rgb(252, 113, 113, 0.7);
+    box-shadow: 0 0 40px rgb(243, 166, 166);
+    border-color: rgba(255, 0, 0, 0.717);
+    transition: all .8s ease-in-out;
+
+}
+
+
+.images {
+    width: 25em;
+    height: 25em;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.blue-bg-outer {
+    width: 25em;
+    height: 25em;
+    border-radius: 50%;
+    background: #000000d2;
+    display: grid;
+    place-items: center;
+}
+
+.white-bg {
+    width: 21.875em;
+    height: 21.875em;
+    border-radius: 50%;
+    background: #fff;
+    display: grid;
+    place-items: center;
+}
+
+.blue-bg {
+    width: 18.75em;
+    height: 18.75em;
+    border-radius: 50%;
+    background: var(--primary-color);
+}
+
+.blue-bg img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+#content {
+    width: 33rem;
+}
+
+/*BUTTON*/
+.cv-btn {
+    margin-top: 1.5rem;
+    padding: 1em 2.5em;
+    border-radius: 25px;
+    background-color: #33383C;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    border: 0;
+    cursor: pointer;
+}
+
+
+/*ANIMATION*/
+
+.animated_text h1 {
+    -webkit-text-stroke: 1px #8a8282;
+    font-family: Arial, Helvetica, sans-serif;
+    color: transparent;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(var(--primary-color), var(--primary-color));
+    -webkit-background-clip: text;
+    background-clip: none;
+    background-position: -500px 0;
+    animation: backcolor 3s linear infinite;
+}
+
+.skills {
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: center;
+    margin-top: 1rem;
+    margin-left: 4rem;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.skills h3 {
+    color: #33383C;
+}
+
+#projectContent p {
+    margin-left: 2rem;
+    margin-top: 1.5rem;
+    font-size:1.2rem;
+    text-wrap: wrap;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: justify;
+    text-indent: 2.5rem;
+    color: rgb(21, 21, 21);
+}
+
+.contact p {
+    font-size: 1.5rem;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-left: 2rem;
+    margin-top: 1.5rem;
+}
+
+.contact a {
+    margin-left: 1rem;
+}
+
+@keyframes backcolor {
+
+    100% {
+        -webkit-text-stroke: 1px #33383C;
+        background-position: 0 0;
+    }
+}
+
+@media only screen and (max-width: 1500px) {
+    html {
+        font-size: 80%;
+    }
+
+    section {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 100%;
+    }
+
+    body {
+        background: linear-gradient(180deg, #33383C 35%, #ffffff 10%);
+    }
+
+    .menu {
+        display: block;
+        font-size: 1.5rem;
+        color: #ffffff;
+    }
+    
+    .images {
+        min-width: 15em;
+    }
+
+    .blue-bg-outer {
+        width: 20em;
+        height: 20em;
+        margin: auto;
+
+    }
+
+    .white-bg {
+        width: 16.875em;
+        height: 16.875em;
+    }
+
+    .blue-bg {
+        width: 12.75em;
+        height: 12.75em;
+    }
+
+    header {
+        padding: 0.7rem 1rem;
+        justify-content: space-between;
+    }
+
+    nav {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background-color: transparent;
+        left: -100%;
+        width: 100%;
+        top: 3rem;
+        transition: all 0.3s ease;
+    }
+
+    nav a {
+        color: #fff;
+    }
+    #click:checked~nav {
+        left: 0;
+    }
+
+    #content {
+        width: 500px;
+    }
+
+    .Information {
+        align-items: start;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    section {
+        margin: 0 1rem;
+    }
+    .images {
+        min-width: 15em;
+    }
+
+    .blue-bg-outer {
+        width: 20em;
+        height: 20em;
+        margin: auto;
+    }
+
+    .white-bg {
+        width: 16.875em;
+        height: 16.875em;
+    }
+
+    .blue-bg {
+        width: 12.75em;
+        height: 12.75em;
+    }
+
+}
+
+@media only screen and (max-width: 320px) {
+    .images {
+        height: 17em;
+    }
+
+    .blue-bg-outer {
+        width: 16em;
+        height: 16em;
+    }
+    
+    .white-bg {
+        width: 13em;
+        height: 13em;
+    }
+
+    .blue-bg {
+        width: 11em;
+        height: 11em;
+    }
+
+    .blue-bg img {
+        position: relative;
+        width: 100%;
+    }
+}
