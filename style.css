@@ -34,6 +34,23 @@ header {
     width: 10%;
 }
 
+#heartButton {
+    position: absolute;
+    left: 10rem;
+    top: 2rem;
+    font-size: 3rem;
+}
+
+#heartButton i.fa-solid.fa-heart { 
+    color: black; 
+    transition: color 0.3s ease;
+  }
+
+#heartButton.active i.fa-solid.fa-heart { 
+    color: red;
+}
+
+
 #click {
     display: none;
 }
