@@ -1,102 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="./logo.png" type="image/png">
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <title>Adithya</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" />
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+    <link rel="shortcut icon" href="images/logo.png" type="image/png">
 </head>
-
 <body>
+    <div class="banner"></div>
+
     <header id="header">
         <div class="logo">
-            <a href="demo.html" id="logo"><img src="logo.png" alt=""></a>
+            <a href="index.html"><h2>ADITHYA</h2></a>
         </div>
-<!--         <div id="heartButton"><i class="fa-solid fa-heart"></i></div> -->
-        <input type="checkbox" id="click">
-        <label for="click" class="mainicon">
-            <div class="menu" id="menu">
-                <i class="bi bi-list"></i>
-            </div>
-        </label>
-        <nav>
-            <a href="#home" onclick="showSection('homeContent')">Home</a>
-            <a href="#skills" onclick="showSection('skillsContent')">Skills</a>
-            <a href="#project" onclick="showSection('projectContent')">Projects</a>
-            <a href="#contact" onclick="showSection('contactContent')">Contact</a>
-            <a href="#about" onclick="showSection('aboutContent')">About</a>
+        <div class="menu-btn" onclick="openNav()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <nav id="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
 
-    <section>
-        <div class="main">
-            <div class="images">
-                <div class="blue-bg-outer">
-                   <div class="white-bg">
-                        <div class="blue-bg">
-                            <img src="Adithya k.png" alt="image">
+    <section id="home">
+        <div class="home">
+            <h2>Hi, Myself</h2>
+            <h1>ADITHYA</h1>
+            <h2>And I'm a <span id="job-desc">Front End Developer</span></h2>
+
+            <a href="./images/ADITHYA.pdf" download="Adithya.pdf"><button class="cv-btn">Download CV</button></a>
+        </div>
+    </section>
+
+    <section id="about" class="abt">
+        <div class="tittle">
+            <h1>About Me</h1>
+            <h3 class="decorated-word">Who I'm</h3>
+        </div>
+        <div class="img">
+            <img src="./images/img3.JPEG" alt="">
+        </div>
+        <div class="about">
+            <p>As a Front-End and Python Full Stack Developer based in Chennai, I am adept at crafting engaging, high-performance web applications that enhance user engagement and drive business success. My educational foundation in Computer Science and Engineering from the Varuvan Vadivelan Institute of Technology equipped me with a robust problem-solving skill set. My career began in a non-technical role as a Marketing Consultant in the Micro Irrigation industry, where I honed vital skills in project management and communication—skills I leverage daily in tech development.
+
+                I am skilled in web technologies including HTML5, CSS3, and JavaScript, and have comprehensive experience in Python and MySQL. My proficiency extends to the Django framework, with which I have successfully completed several advanced projects, further solidifying my capabilities in full-stack development. My use of tools like GitHub and Visual Studio Code complements my technical expertise, enabling me to maintain high standards of coding practice and collaboration.
+                
+                My portfolio showcases projects that vary from dynamic e-commerce platforms to innovative communication tools designed for the deaf and dumb, underlining my passion for creating technology that is accessible and impactful. As I continue to explore new technologies and refine my approach to web development, my aim is to be at the forefront of the field, constantly pushing the boundaries of what is possible in web applications.</p>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="tittle">
+            <h1>Services</h1>
+            <h3 class="decorated-word">What i do</h3>
+        </div>
+
+        <div class="services">
+            <div class="service">
+                <img src="images/design.png" alt="">
+                <h2>Web Design</h2>
+                <p>Crafting visually stunning websites for optimal user experience.</p>
+            </div>
+            <div class="service">
+                <img src="images/advertising.png" alt="">
+                <h2>advertising</h2>
+                <p> Driving brand growth through creative, innovative advertising strategies.</p>
+            </div>
+            <div class="service">
+                <img src="images/app design.png" alt="">
+                <h2>App Design</h2>
+                <p>Creating intuitive web applications for seamless functionality.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="tittle">
+            <h1>My Skills</h1>
+            <h3 class="decorated-word">What I Know</h3>
+        </div>
+
+        <div class="skill-content">
+            <div class="skill-objective">
+                <h2>My Creative skills</h2>
+                <p>As a dynamic Front-End and Python Full Stack Developer with an artistic touch, I leverage a strong foundation in HTML5, CSS3, JavaScript, and intermediate-level Bootstrap to create visually appealing and responsive web applications. My backend expertise in Python, MySQL, and Django, enhanced by my ability to implement DOM manipulation and RESTful APIs, allows me to build robust and interactive solutions. A standout project in my portfolio is the Quiz Game Platform, where I effectively manage data interactions, tracking user details and scores to foster an engaging and educational experience. With a commitment to continuous learning—including basics in React—and a passion for merging functionality with innovative design, I aim to contribute to projects that not only captivate but also empower and connect users, pushing the boundaries of what digital experiences can achieve. My approach to development is always evolving, driven by a curiosity for new technologies and a philosophy that good design is about effective communication and seamless interaction. I strive to be at the forefront of the industry, championing projects that leverage cutting-edge technologies to deliver solutions that are not only efficient but also intuitively useable.</p>
+            </div>
+
+            <div class="skill-list">
+                <div class="skill-item">
+                    <div class="title-wrapper">
+                        <h3>HTML</h3>
+                        <h4>85%</h4>
+                    </div>
+                    <div class="fill-bg">
+                        <div class="filling" data-value="85"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="title-wrapper">
+                        <h3>CSS</h3>
+                        <h4>80%</h4>
+                    </div>
+                    <div class="fill-bg">
+                        <div class="filling" data-value="80"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="title-wrapper">
+                        <h3>JavaScript</h3>
+                        <h4>70%</h4>
+                    </div>
+                    <div class="fill-bg">
+                        <div class="filling" data-value="70"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="title-wrapper">
+                        <h3>Python</h3>
+                        <h4>75%</h4>
+                    </div>
+                    <div class="fill-bg">
+                        <div class="filling" data-value="75"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="title-wrapper">
+                        <h3>MySQL</h3>
+                        <h4>80%</h4>
+                    </div>
+                    <div class="fill-bg">
+                        <div class="filling" data-value="80"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="title-wrapper">
+                        <h3>Django</h3>
+                        <h4>75%</h4>
+                    </div>
+                    <div class="fill-bg">
+                        <div class="filling" data-value="75"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="tittle">
+            <h1>My Projects</h1>
+            <h3 class="decorated-word">What I've Done</h3>
+        </div>
+
+        <div class="project-list">
+            <div class="project">
+                <a href="https://adithyakarunagaran.github.io/Bike-Accessories/" target="_blank">
+                    <div class="project-img-wrapper" onmouseenter="slideInContent(this)" onmouseleave="slideOutContent(this)">
+                        <img src="./images/vaps.png" alt="Bike Accessories Project" class="project-img">
+                        <div class="project-content">
+                            <p>
+                                This project, titled "Interactive Web Features for Enhanced User Experience," showcases a collection of dynamic and responsive web functionalities designed to improve user engagement and accessibility. It includes full-screen overlay navigation, automated and manual slide transitions, responsive design elements, and horizontal scrolling for menu items. Each feature is meticulously integrated using advanced CSS and JavaScript to ensure a seamless and interactive user experience across various devices. The implementation of interactive menus and adaptive layouts further refines the functionality and aesthetic appeal of the website.
+                            </p>
                         </div>
-                   </div>
+                    </div> 
+                    <a href="https://adithyakarunagaran.github.io/Bike-Accessories/" class="project-link" target="_blank">1. Interactive Web Features for Enhanced User Experience</a>
+                </a> 
+            </div>
+    
+            <div class="project">
+                <a href="">
+                    <div class="project-img-wrapper" onmouseenter="slideInContent(this)" onmouseleave="slideOutContent(this)">
+                        <img src="./images/quiz.png" alt="personal portfolio" class="project-img">
+                        <div class="project-content quiz">
+                            <p>
+                                I developed an Interactive Quiz Platform, utilizing a robust combination of Django, HTML, CSS, and JavaScript. This application features a dynamic quiz interface where users can engage in real-time quizzes, testing their knowledge across various topics. The backend, built with Django, manages user data and quiz logic efficiently, while the frontend showcases my skills in creating smooth, responsive interfaces. The use of CSS for styling and JavaScript for handling user interactions ensures a seamless and engaging user experience. This project not only demonstrates my capability to integrate different technologies but also highlights my commitment to creating functional, user-centric web applications.
+                            </p>
+                        </div>
+                    </div> 
+                    <a href="" class="project-link">2. Quiz Game (Full-stack)</a>
+                </a>    
+            </div>
+            
+            <div class="project">
+                <a href="">
+                    <div class="project-img-wrapper" onmouseenter="slideInContent(this)" onmouseleave="slideOutContent(this)">
+                        <img src="./images/vendor.png" alt="personal portfolio" class="project-img">
+                        <div class="project-content">
+                            <p>
+                                This portfolio project showcases a comprehensive application that seamlessly integrates a full-stack web development setup, combining both front-end and back-end technologies. On the front-end, JavaScript, HTML, and CSS are employed to create dynamic and user-friendly interfaces for login and registration forms, utilizing fetch API for asynchronous data handling. On the back-end, the Django framework manages database interactions with models like Registermodel, AddressDetails, and VendorDtails, ensuring efficient data storage and retrieval with CRUD operations exposed via RESTful APIs. This project demonstrates a robust understanding of web technologies and a strong foundation in developing scalable web applications.</p>
+                        </div>
+                    </div> 
+                    <a href="" class="project-link">3. User Management (Full-Stack)</a>
+                </a>    
+            </div>
+
+            <div class="project">
+                <a href="https://adithyakarunagaran.github.io/Bike-Accessories/" target="_blank">
+                    <div class="project-img-wrapper" onmouseenter="slideInContent(this)" onmouseleave="slideOutContent(this)">
+                        <img src="./images/portfolio.png" alt="personal portfolio" class="project-img">
+                        <div class="project-content">
+                            In creating my first portfolio, I embarked on an enriching journey that blends my core technical skills with my passion for design. This project isn't just a collection of my work; it's a testament to my growth as a developer and designer. By integrating CSS animations and JavaScript interactivity, I've crafted a dynamic and engaging user experience. This portfolio showcases not only my capabilities in web development but also my dedication to learning and creativity. Through this endeavor, I've pushed my boundaries, refined my aesthetic sense, and deepened my understanding of user-centric design, marking a significant milestone in my professional journey.
+                        </div>
+                    </div> 
+                    <a href="https://adithyakarunagaran.github.io/Bike-Accessories/" class="project-link" target="_blank">4. Personal Portfolio</a>
+                </a>    
+            </div>
+        </section>
+    
+        <section id="contact">
+            <div class="tittle">
+                <h1>Contact Me</h1>
+                <h3 class="decorated-word">Get in Touch</h3>
+            </div>
+
+            <div class="marquee">
+                <marquee behavior="scroll" direction="left">Here, you can directly send a message to me </marquee>
+            </div>
+
+            <div class="contact">
+                <div class="social-links">
+                    <h3>Profile Links</h3>
+                    <div class="icons">
+                        <a href="www.linkedin.com/in/aadhik2310">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/AdithyaKarunagaran">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="tel:+919677653452">
+                            <i class="fa-solid fa-phone"></i>
+                        </a>
+                        <a href="https://wa.me/919677653452">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                        <a href="https://t.me/919677653452">
+                            <i class="fa-brands fa-telegram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="msg-me">
+                    <h3>Message Me</h3>
+                    <form id="contact-form">
+                        <div>
+                            <label>Name :</label>
+                            <input type="text" name="from_name" id="from_name" placeholder="Your Name" required />
+                        </div>
+                    
+                        <div>
+                            <label>Mail ID :</label>
+                            <input type="email" name="from_email" id="from_email" placeholder="Your Email" required />
+                        </div>
+                    
+                        <div class="msg-box">
+                            <label>Message :</label>
+                            <textarea name="message" id="message" placeholder="Your Message" required rows="3"></textarea>
+                        </div>
+                        
+                        <div class="submit">
+                            <button type="submit">Send</button>
+                        </div>
+                    </form>            
                 </div>
             </div>
 
-
-            <section id="content">
-                <div id="homeContent" class="content-section">
-                    <div class="Information">
-                        <h1>Hi, I'm Adithya</h1>
-                         <div class="animated_text">
-                            <h1 class="title">Python Full Stack Developer</h1>
-                          </div>
-                        <div class="social">
-                            <a href="https://github.com/AdithyaKarunagaran"><i class="bi bi-github"></i></a>
-                            <a href="https://www.instagram.com/aa_._dhi?igsh=MTZwMDZiaGRnYXQ5bg=="><i class="bi bi-instagram"></i></a>
-                            <a href="www.linkedin.com/in/aadhik2310"><i class="bi bi-linkedin"></i></a>
-                        </div>
-                        <a href="Adithya K.pdf" download="Adithya.pdf"><button class="cv-btn" >Download CV</button></a>
-                        
-                    </div>
-                </div>
-
-                <div id="skillsContent" class="content-section" style="display:none;">
-                    <h1>Skills</h1>
-                    <div class="skills">
-                        <ul><h3>HTML5</h3></ul>
-                        <ul><h3>CSS3</h3></ul>
-                        <ul><h3>JavaScript</h3></ul>   
-                        <ul><h3>Python</h3></ul>
-                        <ul><h3>SQL</h3></ul>
-                        <ul><h3>MS Office</h3></ul>
-                        <ul><h3>GitHub</h3></ul>
-                    </div>    
-                </div>
-
-                <div id="projectContent" class="content-section" style="display:none;">
-                    <a href="https://harmonious-axolotl-fa86a6.netlify.app/" target="_blank"><h2>Dynamic E-Commerce Web Development Project [Frontend]</h2></a>
-                    <p>I led a dynamic e-commerce project, excelling in HTML, CSS, and JavaScript. I implemented a responsive design, an interactive slideshow, and a sophisticated shopping cart. My focus on user experience and technical prowess resulted in an engaging, highly functional application, showcasing my advanced web development skills</p>
-                </div>
-
-                <div id="contactContent" class="content-section" style="display:none;">
-                    <h1>Contact</h1>
-                    <div class="contact">
-                        <p><i class="fa-regular fa-envelope fa-lg" style="color: #74C0FC;"></i><a href="https://mail.google.com/mail/?view=cm&fs=1&to=adithyajeeva23@gmail.com" target="_blank">adithyajeeva23@gmail.com</a></p>
-                        <p><i class="fa-solid fa-phone" style="color: #74C0FC;"></i><a href="tel:+919677653452">9677653452</a></p>
-                        <p><i class="fa-brands fa-whatsapp fa-lg" style="color: #74C0FC;"></i><a href="https://wa.me/+919677653452" target="_blank">Chat Now</a></p>
-                    </div>
-                </div>
-                <div id="aboutContent" class="content-section" style="display:none;">
-                    <h1>About Me</h1>
-                    <p>This is some information about me...</p>
-                </div>
-            </section>
-        </div>
+        </div>    
     </section>
-<script src="index.js"></script>
+
+    <footer>
+        <p> @all rights reserved by Adithya</p>
+    </footer>
+    
+    <script src="script.js"></script>
 </body>
 </html>
